@@ -82,7 +82,7 @@ void x16r_hash(const char* input, char* output)
     void *in = (void*) input;
     int size = 80;
 
-    getAlgoString(&input[4], hashOrder);
+    getAlgoString((uint8_t*)&input[4], hashOrder);
 
     for (int i = 0; i < 16; i++) {
         const char elem = hashOrder[i];
